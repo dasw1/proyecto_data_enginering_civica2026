@@ -1,0 +1,54 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: CHICAGO_CRIME_DATABASE_BRONZE
+    schema: STAGING
+    tables:
+      - name: RAW_CHICAGO_CRIMES
+        description: "Tabla raw con los datos crudos de crímenes de Chicago 2024-2026"
+        columns:
+          - name: ID
+            description: "Identificador único del crimen"
+          - name: CASE_NUMBER
+            description: "Número de caso del Chicago Police Department"
+          - name: DATE
+            description: "Fecha y hora del incidente"
+          - name: BLOCK
+            description: "Dirección parcial del incidente"
+          - name: IUCR
+            description: "Illinois Uniform Crime Reporting code"
+          - name: PRIMARY_TYPE
+            description: "Tipo principal del crimen"
+          - name: DESCRIPTION
+            description: "Descripción secundaria del crimen"
+          - name: LOCATION_DESCRIPTION
+            description: "Descripción del lugar del incidente"
+          - name: ARREST
+            description: "Indica si se realizó un arresto"
+          - name: DOMESTIC
+            description: "Indica si el incidente fue doméstico"
+          - name: BEAT
+            description: "Área de patrulla policial"
+          - name: DISTRICT
+            description: "Distrito policial"
+          - name: WARD
+            description: "Distrito electoral"
+          - name: COMMUNITY_AREA
+            description: "Área comunitaria de Chicago"
+          - name: FBI_CODE
+            description: "Clasificación FBI del crimen"
+          - name: X_COORDINATE
+            description: "Coordenada X en State Plane Illinois"
+          - name: Y_COORDINATE
+            description: "Coordenada Y en State Plane Illinois"
+          - name: YEAR
+            description: "Año del incidente"
+          - name: UPDATED_ON
+            description: "Fecha de última actualización del registro"
+          - name: LATITUDE
+            description: "Latitud del incidente"
+          - name: LONGITUDE
+            description: "Longitud del incidente"
+          - name: LOCATION
+            description: "Coordenadas combinadas del incidente"
