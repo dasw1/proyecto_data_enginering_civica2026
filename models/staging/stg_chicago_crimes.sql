@@ -24,10 +24,10 @@ renamed as (
         CASE WHEN UPPER(DOMESTIC) = 'TRUE' THEN TRUE
              WHEN UPPER(DOMESTIC) = 'FALSE' THEN FALSE
              ELSE NULL END                             AS DOMESTIC,
-        beat,
-        district,
-        ward,
-        community_area,
+        beat::VARCHAR(4) as DISTRICT_SECTOR_BEAT,
+        district::integer as DISTRICT,
+        ward::INTEGER AS DISTRITO_ELECTORAL,
+        community_area ,
         fbi_code,
         x_coordinate,
         y_coordinate,
