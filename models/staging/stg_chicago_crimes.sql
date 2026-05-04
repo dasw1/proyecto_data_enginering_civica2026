@@ -17,7 +17,7 @@ renamed as (
         TRIM(UPPER(iucr::varchar(6))) AS ILLINOIS_UNIFORM_CRIME_REPORTING,
         TRIM(UPPER(primary_type::VARCHAR(50))) AS PRIMARY_TYPE_CRIME,
         TRIM(UPPER(description::VARCHAR(100))) AS CRIME_DESCRIPTION,
-        TRIM(UPPER(COALESCE(location_description::VARCHAR(50),'OTHER (SPECIFY)'))) AS CRIME_LOCATION,
+        TRIM(UPPER(COALESCE(location_description::VARCHAR(50),'OTHER (SPECIFY)'))) AS LOCATION_TYPE,
         CASE WHEN UPPER(ARREST) = 'TRUE' THEN TRUE
              WHEN UPPER(ARREST) = 'FALSE' THEN FALSE
              ELSE NULL END                             AS ARREST,
