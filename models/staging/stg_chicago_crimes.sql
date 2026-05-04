@@ -26,16 +26,16 @@ renamed as (
              ELSE NULL END                             AS DOMESTIC,
         beat::VARCHAR(4) as DISTRICT_SECTOR_BEAT,
         district::integer as DISTRICT,
-        ward::INTEGER AS DISTRITO_ELECTORAL,
-        community_area ,
-        fbi_code,
-        x_coordinate,
-        y_coordinate,
-        year,
-        updated_on,
-        latitude,
-        longitude,
-        location
+        ward::INTEGER AS WARD,
+        community_area::INTEGER AS COMMUNITY_AREA,
+        TRIM(UPPER(fbi_code::VARCHAR(3))) AS FBI_CODE,
+        x_coordinate::INTEGER AS X_CORDINATE,
+        y_coordinate::INTEGER AS Y_CORDINATE,
+        year::INTEGER AS CRIME_YEAR,
+        TO_TIMESTAMP(updated_on, 'MM/DD/YYYY HH12:MI:SS AM') AS LAST_UPDATE,
+        latitude::FLOAT AS CRIME_LATITUDE,
+        longitude::FLOAT AS CRIME_LONGITUDE,
+        TRIM(location::VARCHAR(50)) AS CRIME_LOCATION
 
     from source
 
